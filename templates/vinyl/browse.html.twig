@@ -27,7 +27,7 @@
             <h2 class="mt-5">Mixes</h2>
             <div class="row">
                 {% for mix in mixes %}
-                    <a href="{{ path('app_mix_show', { id: mix.id }) }}" class="text-decoration-none col-md-4" style="color: white;">
+                    <a href="{{ path('app_mix_show', { slug: mix.slug }) }}" class="text-decoration-none col-md-4" style="color: white;">
                         <div class="mixed-vinyl-container p-3 text-center">
                             <img src="{{ mix.getImageUrl(300) }}" alt="Mix album cover">
                             <p class="mt-2"><strong>{{ mix.title }}</strong></p>
