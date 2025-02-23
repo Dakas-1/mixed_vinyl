@@ -32,7 +32,7 @@ class MixController extends AbstractController
         ));
     }
 
-    #[Route('/mix/{id}', name: 'app_mix_show')]
+    #[Route('/mix/{slug}', name: 'app_mix_show')]
     public function show(?VinylMix $mix): Response
     {
         if (!$mix) {
@@ -58,7 +58,7 @@ class MixController extends AbstractController
         $this->addFlash('success', 'Vote counted!');
 
         return $this->redirectToRoute('app_mix_show', [
-            'id' => $mix->getId(),
+            'slug' => $mix->getSlug(),
         ]);
     }
 }
