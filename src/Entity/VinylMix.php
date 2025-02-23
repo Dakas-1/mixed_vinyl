@@ -36,6 +36,7 @@ class VinylMix
     {
         $this->createdAt = new \DateTimeImmutable();
     }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -111,6 +112,16 @@ class VinylMix
         $this->votes = $votes;
 
         return $this;
+    }
+
+    public function upVote(): void
+    {
+        $this->votes++;
+    }
+
+    public function downVote(): void
+    {
+        $this->votes--;
     }
 
     public function getVotesString(): string
