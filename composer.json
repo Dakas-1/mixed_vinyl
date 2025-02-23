@@ -13,6 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "doctrine/orm": "^2.20",
         "knplabs/knp-time-bundle": "^2.4",
+        "stof/doctrine-extensions-bundle": "^1.13",
         "symfony/asset": "6.4.*",
         "symfony/console": "6.4.*",
         "symfony/dotenv": "6.4.*",
@@ -72,7 +73,7 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
             "require": "6.4.*"
         }
     },
